@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bài tập 29 - Website Album Hình Ảnh Nâng Cao (Bootstrap Modal)</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/album-modal.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">ALBUM HÌNH ẢNH NÂNG CAO</a>
+      <span class="navbar-text text-light small">Trần Phạm Quốc Thanh - MSSV: 231A010559</span>
+    </div>
+  </nav>
+
+  <!-- Banner -->
+  <section class="hero-album text-center">
+    <div class="container">
+      <h1 class="fw-bold mb-2">Bộ Sưu Tập Album Hình Ảnh</h1>
+      <p class="lead opacity-75 mb-0">
+        Nhấp trực tiếp vào bất kỳ ảnh nhỏ nào bên dưới để xem kích thước lớn trong cửa sổ Bootstrap Modal.
+      </p>
+    </div>
+  </section>
+
+  <!-- Album Grid (Kế thừa từ Bài tập 28) -->
+  <main class="py-5">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+<div class="col">
+          <div class="card album-card">
+            <div class="thumb-wrapper">
+              <img src="images/album01.jpg"
+                   data-full="images/album01.jpg"
+                   data-title="Bình Minh Trên Biển"
+                   data-desc="Khoảnh khắc mặt trời ló dạng trên mặt biển yên bình lúc sáng sớm."
+                   class="album-thumb js-album-thumb"
+                   alt="Bình Minh Trên Biển" />
+              <span class="zoom-hint">Click xem lớn</span>
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold">Bình Minh Trên Biển</h5>
+              <p class="card-text text-muted small flex-grow-1">Khoảnh khắc mặt trời ló dạng trên mặt biển yên bình lúc sáng sớm.</p>
+              <div class="d-flex justify-content-between align-items-center mt-2">
+                <span class="badge bg-light text-dark border">Ảnh #01</span>
+                <small class="text-muted">01/11/2026</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card album-card">
+            <div class="thumb-wrapper">
+              <img src="images/album02.jpg"
+                   data-full="images/album02.jpg"
+                   data-title="Rừng Thông Đà Lạt"
+                   data-desc="Con đường rợp bóng thông xanh mát giữa tiết trời se lạnh cao nguyên."
+                   class="album-thumb js-album-thumb"
+                   alt="Rừng Thông Đà Lạt" />
+              <span class="zoom-hint">Click xem lớn</span>
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold">Rừng Thông Đà Lạt</h5>
+              <p class="card-text text-muted small flex-grow-1">Con đường rợp bóng thông xanh mát giữa tiết trời se lạnh cao nguyên.</p>
+              <div class="d-flex justify-content-between align-items-center mt-2">
+                <span class="badge bg-light text-dark border">Ảnh #02</span>
+                <small class="text-muted">05/11/2026</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card album-card">
+            <div class="thumb-wrapper">
+              <img src="images/album03.jpg"
+                   data-full="images/album03.jpg"
+                   data-title="Phố Đêm Sài Gòn"
+                   data-desc="Nhịp sống sôi động và ánh đèn lung linh tại trung tâm thành phố."
+                   class="album-thumb js-album-thumb"
+                   alt="Phố Đêm Sài Gòn" />
+              <span class="zoom-hint">Click xem lớn</span>
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold">Phố Đêm Sài Gòn</h5>
+              <p class="card-text text-muted small flex-grow-1">Nhịp sống sôi động và ánh đèn lung linh tại trung tâm thành phố.</p>
+              <div class="d-flex justify-content-between align-items-center mt-2">
+                <span class="badge bg-light text-dark border">Ảnh #03</span>
+                <small class="text-muted">09/11/2026</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card album-card">
+            <div class="thumb-wrapper">
+              <img src="images/album04.jpg"
+                   data-full="images/album04.jpg"
+                   data-title="Hoàng Hôn Chiều Tà"
+                   data-desc="Ánh nắng cuối ngày nhuộm vàng cả bầu trời phía chân trời."
+                   class="album-thumb js-album-thumb"
+                   alt="Hoàng Hôn Chiều Tà" />
+              <span class="zoom-hint">Click xem lớn</span>
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold">Hoàng Hôn Chiều Tà</h5>
+              <p class="card-text text-muted small flex-grow-1">Ánh nắng cuối ngày nhuộm vàng cả bầu trời phía chân trời.</p>
+              <div class="d-flex justify-content-between align-items-center mt-2">
+                <span class="badge bg-light text-dark border">Ảnh #04</span>
+                <small class="text-muted">12/11/2026</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card album-card">
+            <div class="thumb-wrapper">
+              <img src="images/album05.jpg"
+                   data-full="images/album05.jpg"
+                   data-title="Hồ Nước Tĩnh Lặng"
+                   data-desc="Mặt hồ phẳng lặng phản chiếu mây trời trong xanh."
+                   class="album-thumb js-album-thumb"
+                   alt="Hồ Nước Tĩnh Lặng" />
+              <span class="zoom-hint">Click xem lớn</span>
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold">Hồ Nước Tĩnh Lặng</h5>
+              <p class="card-text text-muted small flex-grow-1">Mặt hồ phẳng lặng phản chiếu mây trời trong xanh.</p>
+              <div class="d-flex justify-content-between align-items-center mt-2">
+                <span class="badge bg-light text-dark border">Ảnh #05</span>
+                <small class="text-muted">15/11/2026</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card album-card">
+            <div class="thumb-wrapper">
+              <img src="images/album06.jpg"
+                   data-full="images/album06.jpg"
+                   data-title="Cầu Ánh Sáng"
+                   data-desc="Góc kiến trúc hiện đại rực rỡ sắc màu khi thành phố lên đèn."
+                   class="album-thumb js-album-thumb"
+                   alt="Cầu Ánh Sáng" />
+              <span class="zoom-hint">Click xem lớn</span>
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold">Cầu Ánh Sáng</h5>
+              <p class="card-text text-muted small flex-grow-1">Góc kiến trúc hiện đại rực rỡ sắc màu khi thành phố lên đèn.</p>
+              <div class="d-flex justify-content-between align-items-center mt-2">
+                <span class="badge bg-light text-dark border">Ảnh #06</span>
+                <small class="text-muted">18/11/2026</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card album-card">
+            <div class="thumb-wrapper">
+              <img src="images/album07.jpg"
+                   data-full="images/album07.jpg"
+                   data-title="Thảo Nguyên Xanh"
+                   data-desc="Không gian thiên nhiên rộng mở tràn đầy sức sống."
+                   class="album-thumb js-album-thumb"
+                   alt="Thảo Nguyên Xanh" />
+              <span class="zoom-hint">Click xem lớn</span>
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold">Thảo Nguyên Xanh</h5>
+              <p class="card-text text-muted small flex-grow-1">Không gian thiên nhiên rộng mở tràn đầy sức sống.</p>
+              <div class="d-flex justify-content-between align-items-center mt-2">
+                <span class="badge bg-light text-dark border">Ảnh #07</span>
+                <small class="text-muted">21/11/2026</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card album-card">
+            <div class="thumb-wrapper">
+              <img src="images/album08.jpg"
+                   data-full="images/album08.jpg"
+                   data-title="Chiều Tím Mộng Mơ"
+                   data-desc="Sắc tím dịu dàng của bầu trời lúc chuyển giao ngày và đêm."
+                   class="album-thumb js-album-thumb"
+                   alt="Chiều Tím Mộng Mơ" />
+              <span class="zoom-hint">Click xem lớn</span>
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold">Chiều Tím Mộng Mơ</h5>
+              <p class="card-text text-muted small flex-grow-1">Sắc tím dịu dàng của bầu trời lúc chuyển giao ngày và đêm.</p>
+              <div class="d-flex justify-content-between align-items-center mt-2">
+                <span class="badge bg-light text-dark border">Ảnh #08</span>
+                <small class="text-muted">24/11/2026</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card album-card">
+            <div class="thumb-wrapper">
+              <img src="images/album09.jpg"
+                   data-full="images/album09.jpg"
+                   data-title="Đỉnh Núi Sương Mù"
+                   data-desc="Những dãy núi ẩn hiện trong làn sương mờ buổi sớm."
+                   class="album-thumb js-album-thumb"
+                   alt="Đỉnh Núi Sương Mù" />
+              <span class="zoom-hint">Click xem lớn</span>
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold">Đỉnh Núi Sương Mù</h5>
+              <p class="card-text text-muted small flex-grow-1">Những dãy núi ẩn hiện trong làn sương mờ buổi sớm.</p>
+              <div class="d-flex justify-content-between align-items-center mt-2">
+                <span class="badge bg-light text-dark border">Ảnh #09</span>
+                <small class="text-muted">27/11/2026</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container text-center">
+      <p class="mb-0">&copy; 2026 Bài tập 29 - Website Album hình ảnh Nâng cao (Bootstrap Modal + JavaScript).</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Modal chuẩn đặt ở cuối body (gồm header, body chứa ảnh lớn, footer) -->
+  <div class="modal fade" id="imagePreviewModal" tabindex="-1" aria-labelledby="modalImageTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold" id="modalImageTitle">Tên hình ảnh</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+        </div>
+
+        <!-- Modal Body (chứa ảnh lớn & mô tả) -->
+        <div class="modal-body text-center">
+          <img id="modalLargeImage" src="" alt="Xem ảnh lớn" class="modal-preview-img mb-3" />
+          <p id="modalImageCaption" class="text-muted mb-0"></p>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="modal-footer justify-content-between">
+          <span id="modalImageCounter" class="text-muted small fw-semibold">Ảnh 1 / 9</span>
+          <div class="d-flex gap-2">
+            <button type="button" class="btn btn-outline-secondary btn-sm" id="btnPrevImage">&laquo; Ảnh trước</button>
+            <button type="button" class="btn btn-outline-secondary btn-sm" id="btnNextImage">Ảnh sau &raquo;</button>
+            <button type="button" class="btn btn-primary btn-sm" data-bs-dismiss="modal">Đóng</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/album-modal.js"></script>
+</body>
+</html>
